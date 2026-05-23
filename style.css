@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at top, #0f172a, #000);
+  color: #00ffe1;
+}
+
+/* glowing orb */
+.glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: #00ffe1;
+  opacity: 0.12;
+  filter: blur(140px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* terminal box */
+.terminal {
+  position: absolute;
+  inset: 20px;
+  padding: 20px;
+  border: 1px solid rgba(0,255,225,0.2);
+  background: rgba(0,0,0,0.5);
+  overflow-y: auto;
+  backdrop-filter: blur(10px);
+}
+
+.line {
+  margin: 6px 0;
+  opacity: 0.9;
+}
+
+/* glitch mode */
+.glitch {
+  animation: flicker 0.12s infinite;
+}
+
+@keyframes flicker {
+  0% { transform: translate(0px, 0px); }
+  25% { transform: translate(1px, -1px); }
+  50% { transform: translate(-1px, 1px); }
+  75% { transform: translate(1px, 1px); }
+  100% { transform: translate(0px, 0px); }
+}
