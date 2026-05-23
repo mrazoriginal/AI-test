@@ -3,22 +3,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AI Terminal Interface</title>
+  <title>AI-OS Neural Dashboard</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
-  <div class="glow"></div>
 
-  <div class="terminal" id="terminal">
-    <div class="line">BOOTING AI SYSTEM...</div>
-    <div class="line">Loading neural interface...</div>
-    <div class="line">Establishing connection ✔</div>
-    <div class="line">Welcome operator.</div>
-    <div class="line">Click anywhere to interact.</div>
-    <div class="line">Press [G] for glitch mode.</div>
+<div class="scanlines"></div>
+
+<div id="boot">
+  INITIALIZING AI-OS...
+</div>
+
+<div id="os" class="hidden">
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div>AI-OS // NEURAL DASHBOARD</div>
+    <div id="clock"></div>
   </div>
 
-  <script src="script.js"></script>
+  <!-- MAIN GRID -->
+  <div class="grid">
+
+    <div class="panel" id="terminalPanel">
+      <div class="title">TERMINAL</div>
+      <div id="terminal"></div>
+      <input id="cmd" placeholder="type command..." />
+    </div>
+
+    <div class="panel">
+      <div class="title">SYSTEM STATUS</div>
+      <div id="status">
+        CPU: STABLE<br/>
+        MEMORY: 68%<br/>
+        NEURAL LOAD: 41%<br/>
+        RISK INDEX: LOW
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="title">AI CORE</div>
+      <div id="ai">
+        Awaiting interaction...
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+<script src="terminal.js"></script>
+<script src="dashboard.js"></script>
+
 </body>
 </html>
